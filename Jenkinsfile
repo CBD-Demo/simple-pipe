@@ -7,7 +7,7 @@ node {
   }
 
   stage 'package'
-  docker.build('uday/acmecorp-app').push()
+  docker.build('1919191919/CBC_DevOps_Pipeline').push()
 
   stage 'deploy'
   sh './deploy.sh'
