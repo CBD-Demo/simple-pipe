@@ -15,6 +15,6 @@ node ("ecs"){
   sh './deploy.sh'
   }
   
-  stage 'pause'
-  input 'Does everything look good?'
+  stage 'UAT'
+  input 'User Acceptance Test!'
 }
