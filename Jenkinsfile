@@ -1,7 +1,7 @@
 node {
   stage 'build'
   docker.image('kohsuke/acmecorp-buildenv').inside {
-    git 'https://github.com/uaarkoti/docker-jenkins-demo-app.git'
+    git 'https://github.com/CBD-Demo/simple-pipe.git'
     sh 'mvn install'
     archive 'target/*.war'
   }
