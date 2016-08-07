@@ -3,6 +3,6 @@ FROM uday/acmecorp-base
 
 MAINTAINER Udaypal Aarkoti <uaarkoti@gmail.com>
 
-COPY target/test-webapp.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/Emasos-Microservice.war /usr/local/tomcat/webapps/ROOT.war
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
