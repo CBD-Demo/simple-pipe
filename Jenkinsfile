@@ -1,6 +1,6 @@
 node ("ecs"){
   stage 'build'
-  docker.image('kohsuke/acmecorp-buildenv').inside {
+  withDockerContainer('kohsuke/acmecorp-buildenv') {
     git 'https://github.com/CBD-Demo/simple-pipe.git'
     sh 'mvn install'
     archive 'target/*.war'
