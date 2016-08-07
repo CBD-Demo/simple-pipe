@@ -1,8 +1,7 @@
-# Sample App that depends on a standard base image
-FROM uday/acmecorp-base
+FROM tomcat:7-jre7
+MAINTAINER Emasos
 
-MAINTAINER Udaypal Aarkoti <uaarkoti@gmail.com>
+RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
+COPY ./target/Emasos-Microservice.war /usr/local/tomcat/webapps/ROOT.war
 
-COPY target/Emasos-Microservice.war /usr/local/tomcat/webapps/Emasos.war
-RUN rm -rf /usr/local/tomcat/webapps/Emasos
-
+CMD ["catalina.sh", "run"]
