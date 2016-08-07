@@ -7,7 +7,7 @@ node ("ecs"){
   }
 
   stage 'package'
-  docker.build('msos/msos').push()
+  docker.build('emasos/bizops').push()
 
   stage 'deploy'
   sh './deploy.sh'
