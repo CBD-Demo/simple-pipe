@@ -1,4 +1,4 @@
-node {
+node ("ecs"){
   stage 'build'
   docker.image('kohsuke/acmecorp-buildenv').inside {
     git 'https://github.com/CBD-Demo/simple-pipe.git'
@@ -7,7 +7,7 @@ node {
   }
 
   stage 'package'
-  docker.build('1919191919/CBC_DevOps_Pipeline').push()
+  docker.build('msos/msos').push()
 
   stage 'deploy'
   sh './deploy.sh'
